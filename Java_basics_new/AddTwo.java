@@ -8,8 +8,7 @@ public class AddTwo {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		int N = sc.nextInt();
-		int M=sc.nextInt();
-		int O =N+M;
+		int O =N+N;
 		System.out.println("Add is" +O);
 		sc.close();
 
