@@ -54,7 +54,7 @@ public class MethodProb {
 	*/
 	
 	// username of mailid
-	
+	/*
 	static String username(String mailid) {
 		int a =mailid.indexOf("@");
 		String N = mailid.substring(0,a);
@@ -70,7 +70,30 @@ public class MethodProb {
 		sc.close();
 		
 	}
+	*/
+	
+	//prime or not
+	
+	static boolean isPrime(int m) {
+		for(int i=2; i<m/2 ;i++ ) {
+			if(m%i == 0) {
+				return false;			
+			}	
+		}
+		return true;
+	}
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		if(isPrime(n)) {
+		System.out.println("The" + " " +n + " " + "is prime");}
+		else {
+			System.out.println("It is not prime");
+			}
+		sc.close();
+		
+	}
 	
 	
-
 }
