@@ -85,11 +85,16 @@ interface Vehicle {
     void speedUp(int a);
     void applyBrakes(int a);
 }
-
-class Bicycle implements Vehicle{
+interface AdvancedVehicle{
+	void booster(int a);
+	void flying(int b);
+}
+class Bicycle implements Vehicle,AdvancedVehicle{
     
     int speed;
     int gear;  
+    int megaspeed;
+    int flyingaltitude;
     public void changeGear(int newGear){
         
         gear = newGear;
@@ -101,17 +106,27 @@ class Bicycle implements Vehicle{
     public void applyBrakes(int decrement){
         
         speed = speed - decrement;
+    } 
+ public void booster(int highbooster){
+        
+        megaspeed = highbooster;
     }  
+ public void flying(int highflying){
+     
+     flyingaltitude = highflying;
+ }  
     public void printStates() {
         System.out.println("speed: " + speed
-            + " gear: " + gear);
+            + " gear: " + gear  + "  booster : " + megaspeed + " Flying : " + flyingaltitude);
+   
     }
 }
-class Bike implements Vehicle {
+class Bike implements Vehicle,AdvancedVehicle {
     
     int speed;
     int gear;
-    
+    int megaspeed;
+    int flyingaltitude;
     
     public void changeGear(int newGear){
         
@@ -129,10 +144,18 @@ class Bike implements Vehicle {
         
         speed = speed - decrement;
     }
+public void booster(int highbooster){
+        
+        megaspeed = highbooster;
+    }  
+ public void flying(int highflying){
+     
+     flyingaltitude = highflying;
+ }  
     
     public void printStates() {
         System.out.println("speed: " + speed
-            + " gear: " + gear);
+            + " gear: " + gear  + "  booster : " + megaspeed + " Flying : " + flyingaltitude);
     }
     
 }
@@ -142,6 +165,9 @@ public class ClassAbstarct {
         bicycle.changeGear(2);
         bicycle.speedUp(3);
         bicycle.applyBrakes(1);
+        bicycle.booster(100);
+        bicycle.flying(121);
+        
         System.out.println("Bicycle present state :");
         bicycle.printStates();
         
@@ -149,6 +175,8 @@ public class ClassAbstarct {
         bike.changeGear(1);
         bike.speedUp(4);
         bike.applyBrakes(3);
+        bike.booster(211);
+        bike.flying(143);
         System.out.println("Bike present state :");
         bike.printStates();
     
