@@ -1,4 +1,7 @@
 package oops;
+
+import java.util.Arrays;
+
 /*
 interface Flyable {
 	void flying();
@@ -107,7 +110,7 @@ public class ProblemIn {
 
 // pattern prob
 
-
+/*
 
 public class ProblemIn {
 
@@ -155,4 +158,25 @@ public class ProblemIn {
         }
 	}
 }
+*/
+//odd or even in array
 
+public class ProblemIn {
+
+	public static void main(String[] args) {
+		
+		int[] array_nums = {1,2,3,4,5,6,7,8,9,10};
+		
+		
+		System.out.println("Original Array: " + Arrays.toString(array_nums));
+		 int ctr = 0;
+		 for (int i = 0; i < array_nums.length; i++) {
+	            if (array_nums[i] % 2 == 0)
+	                ctr++;
+	        }
+		 
+		 System.out.println("Number of even numbers : " + ctr);
+	        System.out.println("Number of odd numbers  : " + (array_nums.length - ctr));
+	}
+
+	}
