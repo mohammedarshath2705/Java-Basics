@@ -1,6 +1,7 @@
 package oops;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 /*
 interface Flyable {
@@ -160,7 +161,7 @@ public class ProblemIn {
 }
 */
 //odd or even in array
-
+/*
 public class ProblemIn {
 
 	public static void main(String[] args) {
@@ -180,3 +181,34 @@ public class ProblemIn {
 	}
 
 	}
+*/
+
+
+public class ProblemIn {
+	static boolean checkPerfectSquare(double number)    
+	{   
+		for (int i=1; i*i<=number; i++)   
+		{   
+		
+		if((number%i==0) && (number/i==i))   
+		{   
+		
+		return true;   
+		}   
+		}   
+	
+		return false;   
+		}   
+	
+
+	public static void main(String[] args) {
+		System.out.print("Enter any number: "); 
+		Scanner sc=new Scanner(System.in);  
+		double number=sc.nextDouble();   
+		if (checkPerfectSquare(number))   
+			System.out.print("Yes, the given number is perfect square.");   
+			else  
+			System.out.print("No, the given number is not perfect square.");   
+			sc.close();
+}
+}
