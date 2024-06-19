@@ -1,8 +1,8 @@
 package oops;
 
 //import java.util.Arrays;
-import java.util.Scanner;
-
+//import java.util.Scanner;
+import java.util.*;
 /*
 interface Flyable {
 	void flying();
@@ -213,7 +213,7 @@ public class ProblemIn {
 }
 }
 */
-
+/*
 
 // palindrome no prob
 public class ProblemIn {
@@ -236,7 +236,7 @@ public class ProblemIn {
 		 if(temp==sum)    
 			   System.out.println("palindrome number ");    
 			  else    
-			   System.out.println("not palindrome");  */
+			   System.out.println("not palindrome");  
 		String original, reverse = ""; // Objects of String class  
 	      Scanner in = new Scanner(System.in);   
 	      System.out.println("Enter a string/number to check if it is a palindrome");  
@@ -251,7 +251,25 @@ public class ProblemIn {
 		 in.close();
 		
 	}
-}
+}*/
+
+public class ProblemIn {
+	public static void main(String[] args) {
+		//Integer m2 = Integer.valueOf("11111111", 2);
+		//System.out.println(Integer.MAX_VALUE);
+		int n1=0,n2=1,n3,i,count=20;    
+		 System.out.print(n1+" "+n2);
+		    
+		 for(i=2;i<count;++i)
+		 {    
+		  n3=n1+n2;    
+		  System.out.print(" "+n3);    
+		  n1=n2;    
+		  n2=n3;    
+		 }    
+
+	}
+	}
 
 
 
