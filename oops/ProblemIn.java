@@ -1,7 +1,7 @@
 package oops;
 
 //import java.util.Arrays;
-//import java.util.Scanner;
+import java.util.Scanner;
 import java.util.*;
 /*
 interface Flyable {
@@ -252,7 +252,7 @@ public class ProblemIn {
 		
 	}
 }*/
-
+/*
 public class ProblemIn {
 	public static void main(String[] args) {
 		//Integer m2 = Integer.valueOf("11111111", 2);
@@ -272,4 +272,36 @@ public class ProblemIn {
 	}
 
 
+*/
 
+
+public class ProblemIn {
+	static int GCD(int x, int y) 
+    { 
+        
+        if (x == 0) 
+            return y; 
+        if (y == 0) 
+            return x; 
+  
+        
+        if (x == y) 
+            return x; 
+  
+        
+        if (x > y) 
+            return GCD(x - y, y); 
+        return GCD(x, y - x); 
+    } 
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the First Number:");
+		int x = sc.nextInt();
+		System.out.print("Enter the Second Number:");
+		int y = sc.nextInt();
+		
+        System.out.println("GCD of " + x + " and " + y 
+                           + " is " + GCD(x, y)); 
+        sc.close();
+	}
+	}
