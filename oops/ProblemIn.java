@@ -1,8 +1,8 @@
 package oops;
 
 //import java.util.Arrays;
-import java.util.Scanner;
-import java.util.*;
+//import java.util.Scanner;
+//import java.util.*;
 /*
 interface Flyable {
 	void flying();
@@ -362,6 +362,7 @@ public class ProblemIn {
 }
 */
 //prefix
+/*
 public class ProblemIn {
 	public String longestCommonPrefix(String[] S) {
 		if (S.length == 0) return "";
@@ -377,4 +378,69 @@ public class ProblemIn {
 		String s[] = {"flow", "flower", "flame"};
 		System.out.println(ob.longestCommonPrefix(s));
 	}
+}
+*/
+
+
+public class ProblemIn {
+
+    abstract static class Shape {
+        public abstract double getArea();
+        public abstract double getPerimeter();
+    }
+
+    static class Rectangle extends Shape {
+        private double length;
+        private double width;
+
+        public Rectangle(double length, double width) {
+            this.length = length;
+            this.width = width;
+        }
+
+        public double getArea() {
+            return length * width;
+        }
+
+        public double getPerimeter() {
+            return 2 * (length + width);
+        }
+    }
+
+    static class Circle extends Shape {
+        private double radius;
+
+        public Circle(double radius) {
+            this.radius = radius;
+        }
+
+        public double getArea() {
+            return Math.PI * radius * radius;
+        }
+
+        public double getPerimeter() {
+            return 2 * Math.PI * radius;
+        }
+    }
+
+    static class Square extends Rectangle {
+        public Square(double side) {
+            super(side, side);
+        }
+
+        // The getArea() and getPerimeter() methods are inherited from Rectangle
+    }
+
+    public static void main(String[] args) {
+        Shape rectangle = new Rectangle(4, 6);
+        Shape circle = new Circle(3);
+        Shape square = new Square(5);
+
+        System.out.println("Rectangle area: " + rectangle.getArea());
+        System.out.println("Rectangle perimeter: " + rectangle.getPerimeter());
+        System.out.println("Circle area: " + circle.getArea());
+        System.out.println("Circle perimeter: " + circle.getPerimeter());
+        System.out.println("Square area: " + square.getArea());
+        System.out.println("Square perimeter: " + square.getPerimeter());
+    }
 }
