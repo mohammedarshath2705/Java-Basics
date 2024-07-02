@@ -381,7 +381,7 @@ public class ProblemIn {
 }
 */
 
-
+/*
 public class ProblemIn {
 
     abstract static class Shape {
@@ -428,7 +428,7 @@ public class ProblemIn {
             super(side, side);
         }
 
-        // The getArea() and getPerimeter() methods are inherited from Rectangle
+        
     }
 
     public static void main(String[] args) {
@@ -443,4 +443,17 @@ public class ProblemIn {
         System.out.println("Square area: " + square.getArea());
         System.out.println("Square perimeter: " + square.getPerimeter());
     }
+}
+*/
+interface SumCalculator {
+    int sum(int a, int b);
+}
+public class ProblemIn {
+	 public static void main(String[] args) {
+		 SumCalculator sumCalculator = (x, y) -> x + y;
+	        int result = sumCalculator.sum(7, 6);
+	        System.out.println("Sum 7,6): " + result);
+		result = sumCalculator.sum(15, -35);
+	        System.out.println("Sum 15, -35): " + result);
+	 }
 }
